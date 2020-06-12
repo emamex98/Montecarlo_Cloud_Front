@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Parallel Monte Carlo</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/img/favicon.png" rel="icon">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="https://storage.googleapis.com/tec_cloud_assets/assets/css/style.css" rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+  <!-- =======================================================
+  * Template Name: OnePage - v2.0.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Monte Carlo</h1>
+          <h2>Pi aproximation with parallel computing.</h2>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#about" class="btn-get-started scrollto">Learn more</a>
+      </div>
+
+      <div class="row icon-boxes" id="boxes">
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About the Monte Carlo method</h2>
+          <p>How to estimate a value of Pi using the Monte Carlo method - generate a large number of random points and see how many fall in the circle enclosed by the unit square. </p>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-8">
+            <p>
+              One method to estimate the value of <b>π</b> (3.141592...) is by using a Monte Carlo method. 
+              In the demo above, we have a circle of radius 0.5, enclosed by a 1 × 1 square. 
+              The area of the circle is <b>πr2=π/4</b>, the area of the square is 1. If we divide the area of 
+              the circle, by the area of the square we get <b>π/4</b>. We then generate a large number of 
+              uniformly distributed random points and plot them on the graph. These points can be in any 
+              position within the square i.e. between (0,0) and (1,1). If they fall within the circle, they 
+              are coloured red, otherwise they are coloured blue. We keep track of the total number of 
+              points, and the number of points that are inside the circle. If we divide the number of 
+              points within the circle, <b>N<sub>inner</sub></b> by the total number of points, <b>N<sub>total</sub></b>, 
+              we should get a value that is an approximation of the ratio of the areas we calculated above, <b>π/4</b>.
+              In other words, <b>π4≈N<sub>inner</sub>N<sub>total</sub></b>, <b>π≈4N<sub>inner</sub>N<sub>total</sub></b>. 
+              When we only have a small number of points, 
+              the estimation is not very accurate, but when we have hundreds of thousands of points, we get 
+              much closer to the actual value - to within around 2 decimal places of accuracy. You can add 
+              points one at a time, or you can tick the "animate" checkbox to add many points to the graph 
+              very quickly.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <img src="https://storage.googleapis.com/tec_cloud_assets/monte-carlo.png" width="100%"/>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="https://storage.googleapis.com/tec_cloud_assets/assets/js/main.js"></script>
+  <script src="http://1655dc6017a0.ngrok.io/assets/js/fetch.js"></script>
+
+</body>
+
+</html>
